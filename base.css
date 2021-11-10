@@ -510,25 +510,6 @@ article {
   }
 }
 
-/* Avatar */
-.avatar-wrapper {
-  padding: 0 1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.avatar {
-  position: relative;
-  display: block;
-  flex: 1 0 auto;
-  max-width: 15rem;
-  width: 100%;
-}
-@media only screen and (max-width: 1199px) {
-  .avatar-wrapper {
-    padding: 0;
-  }
-}
 
 /* Divider */
 .divider {
@@ -609,17 +590,11 @@ article {
 .contacts li a.skype:hover {
   color: #00aff0;
 }
-.contacts li a.linkedin:hover {
-  color: #0077b5;
-}
 .contacts li a.telegram:hover {
   color: #08c;
 }
 .contacts li a.phone:hover {
   color: dimgrey;
-}
-.contacts li a.website {
-  display: none;
 }
 .contacts li a .icon {
   fill: currentColor;
@@ -850,20 +825,6 @@ li.bordered > ul > details > div {
   background-color: chartreuse;
 }
 
-/* Audio button */
-button.audio {
-  cursor: pointer;
-  background: inherit;
-  font: inherit;
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-button.audio svg {
-  height: 16px;
-  width: 16px;
-  vertical-align: text-top;
-}
 
 /* Resume */
 #resume {
@@ -915,22 +876,6 @@ dialog {
   left: 0;
   background: white;
 }
-dialog .photos {
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-  display: inline-flex;
-  -webkit-overflow-scrolling: touch;
-}
-dialog .photos img {
-  display: block;
-  width: auto;
-  height: 100%;
-  padding: 4px 0 4px 4px;
-}
-dialog .photos img:last-child {
-  padding-right: 4px;
-}
 dialog:target {
   display: block;
 }
@@ -968,23 +913,6 @@ dialog:target ~ * {
   transform: rotate(-45deg);
 }
 
-/* Credits */
-.credits {
-  text-align: right;
-  padding: 0.5em;
-  line-height: 1em;
-  opacity: 0.75;
-  transition: opacity 0.2s linear;
-}
-.credits:hover {
-  opacity: 1;
-}
-@media only screen and (max-width: 767px) {
-  .credits {
-    display: none;
-  }
-}
-
 /* Hide header, reveal footer */
 header {
   position: fixed;
@@ -1007,18 +935,7 @@ main {
 main:nth-last-child(3) {
   margin-bottom: 50vh;
 }
-footer {
-  height: 50vh;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: whitesmoke;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
+
 @media only screen and (max-width: 767px) {
   header {
     height: auto;
@@ -1029,11 +946,6 @@ footer {
   }
   main:nth-last-child(3) {
     margin-bottom: 0;
-  }
-  footer {
-    height: auto;
-    position: relative;
-    padding: 1em;
   }
 }
 @media print {
