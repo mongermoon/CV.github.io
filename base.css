@@ -165,7 +165,11 @@ code {
   background: #eee;
   font-size: 95%;
 }
-
+.my-avatar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
 /* Prevent `sub` and `sup` elements from affecting the line height in all browsers */
 sub,
 sup {
@@ -510,25 +514,6 @@ article {
   }
 }
 
-/* Avatar */
-.avatar-wrapper {
-  padding: 0 1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.avatar {
-  position: relative;
-  display: block;
-  flex: 1 0 auto;
-  max-width: 15rem;
-  width: 100%;
-}
-@media only screen and (max-width: 1199px) {
-  .avatar-wrapper {
-    padding: 0;
-  }
-}
 
 /* Divider */
 .divider {
