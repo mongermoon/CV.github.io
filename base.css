@@ -509,8 +509,8 @@ article {
 .avatar-wrapper {
   padding: 0 1em;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: start;
   float:left; /* Выравнивание по левому краю */
   margin: 5px 5px 5px 0; /* Отступы вокруг картинки */
 }
