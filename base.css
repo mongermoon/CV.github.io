@@ -1,14 +1,3 @@
-::-moz-selection {
-  background: yellow;
-}
-::selection {
-  background: yellow;
-}
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
 html {
   font-size: 14px;
   -webkit-text-size-adjust: 100%;
@@ -144,11 +133,6 @@ ol > li::before {
   height: 1rem;
   margin-top: calc((1.4285rem - 1rem) / 2);
 }
-ol.inverted > li::before {
-  background: black;
-  color: white;
-  font-weight: normal;
-}
 a {
   color: blue;
   background-color: transparent;
@@ -158,15 +142,8 @@ a[rel="external"]:not(.label):hover,
 a.language:hover span {
   text-decoration: underline;
 }
-code {
-  border: 1px solid #bdbdbd;
-  padding: 0 0.25em;
-  border-radius: 3px;
-  background: #eee;
-  font-size: 95%;
-}
 .my-avatar {
-   margin-top: 10px;
+  margin-top: 10px;
   margin-left: 10px;
   background-color: red;
 }
@@ -183,59 +160,6 @@ sub {
 }
 sup {
   top: -0.5em;
-}
-
-/* Remove the border on images inside links in IE 10 */
-img {
-  border-style: none;
-}
-
-/* Change the font styles in all browsers, remove the margin in Firefox and Safari */
-button,
-input {
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-
-  /* Show the overflow in IE and Edge */
-  overflow: visible;
-}
-
-/* Remove the inheritance of text transform in Edge, Firefox, and IE */
-button {
-  text-transform: none;
-}
-
-/* Correct the inability to style clickable types in iOS and Safari	*/
-button,
-[type="button"] {
-  -webkit-appearance: button;
-  appearance: button;
-}
-
-/* Remove the inner border and padding in Firefox	*/
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-/* Restore the focus styles unset by the previous rule */
-button:-moz-focusring,
-[type="button"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-
-/* Add the correct box sizing in IE 10, remove the padding in IE 10 */
-[type="checkbox"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-/* Utiltities */
-.nowrap {
-  white-space: nowrap;
 }
 
 /* Article */
@@ -306,24 +230,11 @@ article {
   }
 }
 
-/**
- * # Semantic UI - 2.4.2
- * https://github.com/Semantic-Org/Semantic-UI
- * https://www.semantic-ui.com/
- * Copyright 2014 Contributors
- * Released under the MIT license
- * https://opensource.org/licenses/MIT
- */
 .grid {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: stretch;
   padding: 0;
-  /**
-   * Temporary hack to be sure avatar
-   * is rendered on print preview
-   */
-  display: block !important;
 }
 .grid .grid {
   margin-left: -1em;
@@ -539,35 +450,6 @@ article {
   white-space: nowrap;
 }
 
-/* Labels */
-.labels > .label {
-  background-color: #e8e8e8;
-  border-radius: 0.28571429rem;
-  color: rgba(0, 0, 0, 0.6);
-  cursor: pointer;
-  display: block;
-  float: left;
-  font-size: 0.78571429rem;
-  font-weight: 600;
-  line-height: 1;
-  margin-bottom: 0.5em;
-  padding: 0.5833em 0.833em;
-  transition: background 0.1s ease;
-  -webkit-transition: background 0.1s ease;
-}
-.labels > .label:hover {
-  background-color: #e0e0e0;
-  color: rgba(0, 0, 0, 0.8);
-}
-.labels > .label:not(:last-child) {
-  margin-right: 0.5em;
-}
-
-/* Job */
-.job {
-  margin-bottom: 0.25rem;
-}
-
 /* Contacts */
 .contacts {
   list-style: none outside none;
@@ -640,92 +522,17 @@ details > summary::-webkit-details-marker {
   margin-left: 0.25em;
   margin-right: 0.25em;
 }
-details > summary {
-  display: list-item;
-  cursor: pointer;
-}
 details > div {
   margin-top: 0.5em;
 }
-details > div::after {
-  content: " ";
-  clear: both;
-  display: block;
-}
 
-/* Alternative to <details> compatible with Safari */
-.details > input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  border-radius: 0;
-  background: none;
-  transition: 0.2s;
-  cursor: pointer;
-  width: 1.5em;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 auto;
-  height: 1.5em;
-  vertical-align: top;
-  outline: none;
-}
-.details > input::after {
-  content: " ";
-  border-top: 0.35em solid transparent;
-  border-bottom: 0.35em solid transparent;
-  border-left: 0.5em solid black;
-  position: relative;
-  width: 0.5em;
-  height: 0.7em;
-  cursor: pointer;
-}
-.details > input:checked {
-  transform: rotate(90deg);
-}
-.details > label.summary {
-  cursor: pointer;
-}
-.details > input:checked ~ div {
-  display: block;
-}
 .details > div {
   display: none;
-}
-.details > div.labels {
-  margin-top: 0.5em;
-}
-.details > div::after {
-  content: " ";
-  clear: both;
-  display: block;
-}
-
-/* Details as a standalone block */
-div.details > input:first-child {
-  float: left;
-}
-div.details > input:first-child + label {
-  width: calc(100% - 1.5em);
-  padding: 0;
-  display: inline-block;
-}
-div.details > input:first-child + label + .details-body {
-  padding-left: 1.5em;
 }
 
 /* Details as a list item */
 li.details {
   list-style-type: none;
-}
-li.details::before {
-  display: none;
-}
-li.details > input {
-  float: left;
-  margin-left: -1.5em;
 }
 
 /* Highlighted list item */
@@ -733,25 +540,6 @@ li.highlighted {
   padding: 0.5em;
   background: rgba(0, 0, 0, 0.04);
   border-radius: 4px;
-}
-
-/* Bordered list item */
-li.bordered {
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 4px;
-  padding: 0.5em;
-  transition: all 0.2s linear;
-}
-li.bordered:hover {
-  background: #fafafa;
-}
-li.bordered > ul > li.details > div,
-li.bordered > ul > details > div {
-  padding: 0.5em 0.5em 0 2em;
-  border-top: 1px solid rgb(224, 224, 224);
-  margin-top: 0.5em;
-  margin-left: -2em;
-  margin-right: -0.5em;
 }
 
 /* Timeline */
@@ -771,43 +559,6 @@ li.bordered > ul > details > div {
 }
 .timeline > li p {
   margin: 0;
-}
-
-/* Tags */
-.tags.small {
-  font-size: 0.88em;
-}
-.tags.bulleted .tag:not(:last-child)::after {
-  content: "●";
-  display: inline-block;
-  font-family: "Arial", sans-serif;
-  font-size: 1rem;
-  margin: 0 0.25em 0 0.25em;
-}
-
-/* Print */
-@media print {
-  .page,
-  .page[style] {
-    padding: 0;
-    box-shadow: none;
-    border-color: transparent !important;
-  }
-  .grid {
-    display: block;
-  }
-  .avatar-wrapper {
-    padding: 0;
-  }
-  .contacts {
-    margin-top: 1em;
-  }
-  .contacts li a.website {
-    display: block;
-  }
-  .credits {
-    display: none;
-  }
 }
 
 /* Color */
@@ -838,94 +589,6 @@ li.bordered > ul > details > div {
   background-color: chartreuse;
 }
 
-
-/* Resume */
-#resume {
-  color: inherit;
-  transition: 0.2s;
-  opacity: 0.75;
-  padding: 0 0.25em 0.25em 0.25em;
-  margin-left: -0.25em;
-  display: inline-block;
-}
-#resume:hover {
-  opacity: 1;
-}
-#resume .dots {
-  background: #808080;
-  color: white;
-  padding: 0 0.2em;
-  border-radius: 3px;
-  height: 1em;
-  line-height: 1em;
-  margin-top: 0.2857142857em;
-  float: left;
-  margin-right: 0.2857142857em;
-}
-#resume .dots .dot {
-  float: left;
-  height: 0.42857142857em;
-  width: 0.42857142857em;
-  background: white;
-  border-radius: 100%;
-  margin-top: 0.2857142857em;
-  vertical-align: top;
-}
-#resume .dots .dot:not(:last-child) {
-  margin-right: 0.2142857em;
-}
-
-/* Dialog */
-dialog {
-  display: none;
-  height: 100%;
-  width: 100%;
-  z-index: 3;
-  padding: 0;
-  border: none;
-  margin: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: white;
-}
-dialog:target {
-  display: block;
-}
-dialog:target ~ * {
-  display: none;
-}
-
-/* Close */
-.close {
-  text-indent: -9999px;
-  position: absolute;
-  z-index: 1;
-  top: 2em;
-  left: 2em;
-  display: inline-block;
-  width: 4em;
-  height: 4em;
-  overflow: hidden;
-}
-.close::before,
-.close::after {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 0;
-  margin-top: -1px;
-  background: white;
-  height: 1px;
-}
-.close::before {
-  transform: rotate(45deg);
-}
-.close::after {
-  transform: rotate(-45deg);
-}
-
 /* Hide header, reveal footer */
 header {
   position: fixed;
@@ -953,18 +616,6 @@ main:nth-last-child(3) {
   header {
     height: auto;
     position: relative;
-  }
-  header + main {
-    margin-top: 0;
-  }
-  main:nth-last-child(3) {
-    margin-bottom: 0;
-  }
-}
-@media print {
-  header,
-  footer {
-    display: none;
   }
   header + main {
     margin-top: 0;
