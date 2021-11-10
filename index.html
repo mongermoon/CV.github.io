@@ -25,11 +25,11 @@
 </head>
 <body>
 	<main>
-		<div class='my-avatar'>
-			<img src="icon-512x512.png" alt="My photo">
-		</div>
 		<article>
 			<div class="page" style="border-color: midnightblue;">
+				<div class='my-avatar'>
+					<img src="icon-512x512.png" alt="My photo">
+				</div>
 				<div class="stackable grid">
 					<div class="row">
 						<div class="thirteen wide column">
@@ -521,16 +521,11 @@
 				document.querySelectorAll(".page").forEach(function(page) {
 					page.style.borderColor = color;
 				});
-				document.querySelectorAll(".avatar").forEach(function(avatar) {
-					avatar.contentDocument.getElementById("circle").setAttribute("fill", color);
-				});
 			} catch (error) {}
 		}
 		document.getElementById("midnightblue").addEventListener("click", switchToColor.bind(this, "midnightblue"));
 		document.getElementById("chartreuse").addEventListener("click", switchToColor.bind(this, "chartreuse"));
-		document.getElementById("meh").addEventListener("click", function() {
-			this.childNodes[2].play();
-		});
+		
 		function replaceNoscript(noscript) {
 			var parent = noscript.parentElement;
 			Array.prototype.slice.call((new DOMParser()).parseFromString(noscript.textContent, "text/html").body.children).forEach(function(element) {
@@ -543,13 +538,7 @@
 				func(item);
 			});
 		}
-		var childhoodPhotos = document.getElementById("childhood").getElementsByClassName("photos")[0];
-		document.getElementById("resume").addEventListener("click", function() {
-			callFuncOnCollection(childhoodPhotos.getElementsByTagName("NOSCRIPT"), replaceNoscript);
-		});
-		if (window.location.hash === "#childhood") {
-			callFuncOnCollection(childhoodPhotos.getElementsByTagName("NOSCRIPT"), replaceNoscript);
-		}
+	
 		if ("serviceWorker" in navigator) {
 			window.addEventListener("load", function() {
 				navigator.serviceWorker.register('/sw.js');
