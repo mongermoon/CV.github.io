@@ -505,6 +505,13 @@ article {
 .grid > .row > [class*="mobile only"].column {
   display: none;
 }
+/* Avatar */
+.avatar-wrapper {
+  padding: 0 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @media only screen and (max-width: 767px) {
   [class*="mobile only"].grid,
   .grid > [class*="mobile only"].row,
