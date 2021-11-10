@@ -511,6 +511,8 @@ article {
   display: flex;
   align-items: center;
   justify-content: center;
+  float:left; /* Выравнивание по левому краю */
+  margin: 5px 5px 5px 0; /* Отступы вокруг картинки */
 }
 @media only screen and (max-width: 767px) {
   [class*="mobile only"].grid,
