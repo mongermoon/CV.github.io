@@ -95,18 +95,6 @@ strong {
 small {
   font-size: 80%;
 }
-ul,
-ol {
-  list-style: none outside none;
-  padding-left: 1.5em;
-  margin: 0;
-}
-ol {
-  counter-reset: ol-counter;
-}
-li {
-  list-style: none outside none;
-}
 ul > li::before {
   content: "●";
   font-family: "Arial", sans-serif;
@@ -114,24 +102,6 @@ ul > li::before {
   width: 1.5em;
   margin-left: -1.5em;
   text-align: center;
-}
-ol > li::before {
-  content: counter(ol-counter);
-  counter-increment: ol-counter;
-  float: left;
-  width: 1rem;
-  border-radius: 0.25em;
-  background: transparent;
-  color: inherit;
-  font-weight: bold;
-  font-size: 0.7em;
-  font-family: inherit;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: calc(-1.5rem + 0.5rem / 2);
-  height: 1rem;
-  margin-top: calc((1.4285rem - 1rem) / 2);
 }
 a {
   color: blue;
@@ -289,95 +259,18 @@ article {
 }
 
 /* Column Width */
-.grid > .row > [class*="one wide"].column,
-.grid > .column.row > [class*="one wide"].column,
-.grid > [class*="one wide"].column,
-.column.grid > [class*="one wide"].column {
-  width: 6.25% !important;
-}
-.grid > .row > [class*="two wide"].column,
-.grid > .column.row > [class*="two wide"].column,
-.grid > [class*="two wide"].column,
-.column.grid > [class*="two wide"].column {
-  width: 12.5% !important;
-}
-.grid > .row > [class*="three wide"].column,
-.grid > .column.row > [class*="three wide"].column,
-.grid > [class*="three wide"].column,
-.column.grid > [class*="three wide"].column {
-  width: 18.75% !important;
-}
-.grid > .row > [class*="four wide"].column,
-.grid > .column.row > [class*="four wide"].column,
-.grid > [class*="four wide"].column,
-.column.grid > [class*="four wide"].column {
-  width: 25% !important;
-}
-.grid > .row > [class*="five wide"].column,
-.grid > .column.row > [class*="five wide"].column,
-.grid > [class*="five wide"].column,
-.column.grid > [class*="five wide"].column {
-  width: 31.25% !important;
-}
+
 .grid > .row > [class*="six wide"].column,
 .grid > .column.row > [class*="six wide"].column,
 .grid > [class*="six wide"].column,
 .column.grid > [class*="six wide"].column {
   width: 37.5% !important;
 }
-.grid > .row > [class*="seven wide"].column,
-.grid > .column.row > [class*="seven wide"].column,
-.grid > [class*="seven wide"].column,
-.column.grid > [class*="seven wide"].column {
-  width: 43.75% !important;
-}
-.grid > .row > [class*="eight wide"].column,
-.grid > .column.row > [class*="eight wide"].column,
-.grid > [class*="eight wide"].column,
-.column.grid > [class*="eight wide"].column {
-  width: 50% !important;
-}
-.grid > .row > [class*="nine wide"].column,
-.grid > .column.row > [class*="nine wide"].column,
-.grid > [class*="nine wide"].column,
-.column.grid > [class*="nine wide"].column {
-  width: 56.25% !important;
-}
 .grid > .row > [class*="ten wide"].column,
 .grid > .column.row > [class*="ten wide"].column,
 .grid > [class*="ten wide"].column,
 .column.grid > [class*="ten wide"].column {
   width: 62.5% !important;
-}
-.grid > .row > [class*="eleven wide"].column,
-.grid > .column.row > [class*="eleven wide"].column,
-.grid > [class*="eleven wide"].column,
-.column.grid > [class*="eleven wide"].column {
-  width: 68.75% !important;
-}
-.grid > .row > [class*="twelve wide"].column,
-.grid > .column.row > [class*="twelve wide"].column,
-.grid > [class*="twelve wide"].column,
-.column.grid > [class*="twelve wide"].column {
-  width: 75% !important;
-}
-.grid > .row > [class*="thirteen wide"].column,
-.grid > .column.row > [class*="thirteen wide"].column,
-.grid > [class*="thirteen wide"].column,
-.column.grid > [class*="thirteen wide"].column {
-  width: 81.25% !important;
-}
-.grid > .row > [class*="fourteen wide"].column,
-.grid > .column.row > [class*="fourteen wide"].column,
-.grid > [class*="fourteen wide"].column,
-.column.grid > [class*="fourteen wide"].column {
-  width: 87.5% !important;
-}
-.grid > .row > [class*="fifteen wide"].column,
-.grid > .column.row > [class*="fifteen wide"].column,
-.grid > [class*="fifteen wide"].column,
-.column.grid > [class*="fifteen wide"].column {
-  width: 93.75% !important;
 }
 .grid > .row > [class*="sixteen wide"].column,
 .grid > .column.row > [class*="sixteen wide"].column,
@@ -422,8 +315,8 @@ article {
   display: flex;
   align-items: center;
   justify-content: start;
-  float:left; /* Выравнивание по левому краю */
-  margin: 5px 5px 5px 0; /* Отступы вокруг картинки */
+  float:left; 
+  margin: 5px 5px 5px 0; 
 }
 @media only screen and (max-width: 767px) {
   [class*="mobile only"].grid,
@@ -514,27 +407,6 @@ article {
   }
 }
 
-/* Native <details> element styling */
-details {
-  display: block;
-}
-details > summary::-webkit-details-marker {
-  margin-left: 0.25em;
-  margin-right: 0.25em;
-}
-details > div {
-  margin-top: 0.5em;
-}
-
-.details > div {
-  display: none;
-}
-
-/* Details as a list item */
-li.details {
-  list-style-type: none;
-}
-
 /* Highlighted list item */
 li.highlighted {
   padding: 0.5em;
@@ -551,14 +423,23 @@ li.highlighted {
 .timeline:not(:last-child) {
   margin-bottom: 1em;
 }
-.timeline > li::before {
-  display: none;
-}
 .timeline > li:not(:last-child) {
   margin-bottom: 1em;
 }
 .timeline > li p {
   margin: 0;
+}
+
+/* Tags */
+.tags.small {
+  font-size: 0.88em;
+}
+.tags.bulleted .tag:not(:last-child)::after {
+  content: "●";
+  display: inline-block;
+  font-family: "Arial", sans-serif;
+  font-size: 1rem;
+  margin: 0 0.25em 0 0.25em;
 }
 
 /* Color */
