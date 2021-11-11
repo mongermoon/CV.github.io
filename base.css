@@ -265,6 +265,7 @@ article {
 .grid > [class*="six wide"].column,
 .column.grid > [class*="six wide"].column {
   width: 37.5% !important;
+  float: right;
 }
 .grid > .row > [class*="ten wide"].column,
 .grid > .column.row > [class*="ten wide"].column,
